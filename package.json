@@ -1,0 +1,72 @@
+{
+    "name": "vite",
+    "version": "0.0.0",
+    "description": "",
+    "keywords": [],
+    "homepage": "",
+    "bugs": {
+        "url": "https://github.com"
+    },
+    "license": "UNLICENSED",
+    "author": "",
+    "main": "server/index.mjs",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com"
+    },
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
+        "netlify": "ntl dev",
+        "prebuild": "tsc",
+        "preview": "vite preview",
+        "server": "nodemon server/index.mjs",
+        "start": "NODE_ENV=production node server/index.mjs",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "@emotion/react": "*",
+        "@emotion/styled": "*",
+        "@mui/icons-material": "*",
+        "@netlify/functions": "*",
+        "axios": "*",
+        "cors": "*",
+        "dotenv": "*",
+        "express": "*",
+        "helmet": "*",
+        "react": "*",
+        "react-dom": "*",
+        "react-helmet-async": "*",
+        "react-hot-toast": "*",
+        "react-router-dom": "*",
+        "swr": "*",
+        "uuid": "*",
+        "zustand": "*"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "*",
+        "@testing-library/react": "*",
+        "@types/node": "*",
+        "@types/react": "*",
+        "@types/react-dom": "*",
+        "@types/react-router-dom": "*",
+        "@types/uuid": "*",
+        "@typescript-eslint/eslint-plugin": "*",
+        "@typescript-eslint/parser": "*",
+        "@vitejs/plugin-react-swc": "*",
+        "autoprefixer": "*",
+        "eslint": "*",
+        "eslint-plugin-import": "*",
+        "eslint-plugin-react-hooks": "*",
+        "eslint-plugin-react-refresh": "*",
+        "jsdom": "*",
+        "nodemon": "*",
+        "sass": "*",
+        "typescript": "*",
+        "vite": "*",
+        "vite-plugin-pwa": "*",
+        "vitest": "*"
+    },
+    "private": true
+}
