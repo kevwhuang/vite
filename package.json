@@ -9,21 +9,19 @@
     },
     "license": "UNLICENSED",
     "author": "",
-    "main": "server/index.mjs",
     "repository": {
         "type": "git",
         "url": "https://github.com"
     },
     "scripts": {
+        "be": "nodemon server/index.mjs",
         "build": "vite build",
         "dev": "vite",
-        "lint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
-        "netlify": "ntl dev",
-        "prebuild": "tsc",
-        "preview": "vite preview",
-        "server": "nodemon server/index.mjs",
+        "eslint": "eslint src --ext js,cjs,mjs,jsx,ts,tsx",
+        "fe": "ntl dev",
         "start": "NODE_ENV=production node server/index.mjs",
-        "test": "vitest"
+        "test": "vitest",
+        "tslint": "tsc"
     },
     "dependencies": {
         "@emotion/react": "*",
@@ -31,10 +29,6 @@
         "@mui/icons-material": "*",
         "@netlify/functions": "*",
         "axios": "*",
-        "cors": "*",
-        "dotenv": "*",
-        "express": "*",
-        "helmet": "*",
         "react": "*",
         "react-dom": "*",
         "react-helmet-async": "*",
@@ -42,12 +36,16 @@
         "react-router-dom": "*",
         "swr": "*",
         "uuid": "*",
-        "zustand": "*"
+        "zustand": "*",
+        "": "",
+        "cors": "*",
+        "dotenv": "*",
+        "express": "*",
+        "helmet": "*"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
-        "@types/node": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
         "@types/react-router-dom": "*",
@@ -61,12 +59,13 @@
         "eslint-plugin-react-hooks": "*",
         "eslint-plugin-react-refresh": "*",
         "jsdom": "*",
-        "nodemon": "*",
         "sass": "*",
         "typescript": "*",
         "vite": "*",
         "vite-plugin-pwa": "*",
-        "vitest": "*"
+        "vitest": "*",
+        "": "",
+        "nodemon": "*"
     },
     "private": true
 }

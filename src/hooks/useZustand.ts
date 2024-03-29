@@ -1,11 +1,9 @@
-'use strict';
-
 import { create } from 'zustand';
 
 const initialize: ZustandState = {
 };
 
-const useZustand = create<ZustandState & ZustandActions>(() => ({
+const useZustand = create<ZustandActions & ZustandState>(() => ({
     ...initialize,
 }));
 
