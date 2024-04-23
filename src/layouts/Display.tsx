@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom';
 
 function Display(): React.ReactElement {
     return (
-        <div id="display">
+        <>
             <Outlet />
-        </div>
+        </>
     );
 }
 

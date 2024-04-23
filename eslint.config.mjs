@@ -1,29 +1,24 @@
 'use strict';
 
-module.exports = {
-    root: true,
-    parser: '@typescript-eslint/parser',
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:import/recommended',
-        'plugin:import/typescript',
-        'plugin:react-hooks/recommended',
-    ],
-    ignorePatterns: ['global.d.ts'],
-    plugins: ['react-refresh'],
-    env: {
-        browser: true,
-        es2022: true,
-    },
-    parserOptions: {
+import globals from 'globals';
+import typescriptParser from '@typescript-eslint/parser';
+
+const eslint = {
+    files: ['src/**/*.{ts,tsx}'],
+    ignores: ['src/types/**'],
+    languageOptions: {
+        parser: typescriptParser,
         ecmaVersion: 'latest',
         sourceType: 'module',
+        globals: {
+            ...globals.browser,
+        },
+    },
+    linterOptions: {
+        noInlineConfig: true,
+        reportUnusedDisableDirectives: true,
     },
     rules: {
-        '@typescript-eslint/ban-ts-comment': 2,
-        '@typescript-eslint/no-explicit-any': 0,
-        '@typescript-eslint/no-inferrable-types': 2,
         'array-bracket-spacing': 2,
         'array-callback-return': 2,
         'arrow-parens': [2, 'as-needed'],
@@ -37,7 +32,7 @@ module.exports = {
         'comma-style': 2,
         'computed-property-spacing': 2,
         'default-param-last': 2,
-        'dot-notation': 2,
+        'dot-notation': 0,
         'eol-last': 2,
         'eqeqeq': 2,
         'func-call-spacing': 2,
@@ -46,12 +41,7 @@ module.exports = {
         'generator-star-spacing': 2,
         'id-length': 0,
         'implicit-arrow-linebreak': 2,
-        'import/extensions': 2,
-        'import/first': 2,
-        'import/no-mutable-exports': 2,
-        'import/no-webpack-loader-syntax': 2,
-        'import/prefer-default-export': 2,
-        'indent': 2,
+        'indent': [2, 4, { SwitchCase: 1 }],
         'key-spacing': 2,
         'keyword-spacing': 2,
         'max-len': [2, { code: 100 }],
@@ -96,7 +86,7 @@ module.exports = {
         'object-curly-spacing': [2, 'always'],
         'object-shorthand': 2,
         'one-var': [2, 'never'],
-        'operator-linebreak': [2, 'before'],
+        'operator-linebreak': 2,
         'padded-blocks': [2, 'never'],
         'prefer-arrow-callback': 2,
         'prefer-const': 2,
@@ -118,3 +108,5 @@ module.exports = {
         'wrap-iife': 2,
     },
 };
+
+export default [eslint];

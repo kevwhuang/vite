@@ -22,7 +22,6 @@ import './styles/root.scss';
 import './styles/pages.scss';
 import './styles/keyframes.scss';
 import './styles/media/media.scss';
-import './styles/utilities.scss';
 import './styles/dev.scss';
 
 if (navigator.userAgent.search(/Macintosh|Windows NT/) === -1) {
@@ -46,7 +45,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     </Route>
 ));
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
     <React.StrictMode>
         <SWRConfig value={config}>
             <RouterProvider router={router} fallbackElement={<Fallback />} />
