@@ -37,6 +37,7 @@
     "devDependencies": {
         "@testing-library/jest-dom": "*",
         "@testing-library/react": "*",
+        "@types/node": "*",
         "@types/react": "*",
         "@types/react-dom": "*",
         "@types/react-router-dom": "*",
