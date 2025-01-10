@@ -1,54 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import {
-    Navigate,
     Route,
     RouterProvider,
     createBrowserRouter,
     createRoutesFromElements,
 } from 'react-router-dom';
-import { SWRConfig } from 'swr';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 import Display from './layouts/Display';
-
+import Error from './pages/Error';
 import Home from './pages/Home';
-
-import Error from './pages/statuses/Error';
-import Fallback from './pages/statuses/Fallback';
-import Unknown from './pages/statuses/Unknown';
+import Unknown from './pages/Unknown';
 
 import './styles/rectify.scss';
-import './styles/root.scss';
-import './styles/pages.scss';
+import './styles/main.scss';
+import './styles/media.scss';
+import './styles/tablet.scss';
+import './styles/mobile.scss';
 import './styles/keyframes.scss';
-import './styles/media/media.scss';
 import './styles/dev.scss';
 
-if (navigator.userAgent.search(/Macintosh|Windows NT/) === -1) {
-    import('./styles/media/mobile.scss');
-}
-
-const config = {
-    errorRetryCount: 5,
-    refreshInterval: 600000,
-    revalidateOnReconnect: true,
-    shouldRetryOnError: true,
-};
-
 const router = createBrowserRouter(createRoutesFromElements(
-    <Route path="" element={<Display />} errorElement={<Error />}>
-        <Route index element={<Home />} />
-        <Route path="error" element={<Error />} />
-        <Route path="fallback" element={<Fallback />} />
-        <Route path="home" element={<Navigate to="/" replace={true} />} />
-        <Route path="*" element={<Unknown />} />
-    </Route>
+    <Route element={<Display />} errorElement={<Error />} path="">
+        <Route element={<Error />} path="error" />
+        <Route element={<Home />} index />
+        <Route element={<Unknown />} path="*" />
+    </Route>,
 ));
 
-ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('main')!).render(
     <React.StrictMode>
-        <SWRConfig value={config}>
-            <RouterProvider router={router} fallbackElement={<Fallback />} />
-        </SWRConfig>
-    </React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>,
 );

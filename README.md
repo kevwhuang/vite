@@ -1,7 +1,1 @@
 # Vite
-
-Contributors: 
-
-Version: 
-
-Date: 

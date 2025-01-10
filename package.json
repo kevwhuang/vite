@@ -1,58 +1,37 @@
 {
     "name": "vite",
     "version": "0.0.0",
-    "description": "",
-    "keywords": [],
-    "homepage": "",
-    "bugs": {
-        "url": "https://github.com"
-    },
-    "license": "UNLICENSED",
     "author": "",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com"
-    },
     "scripts": {
         "build": "vite build",
-        "dev": "vite",
-        "eslint": "eslint",
-        "fe": "ntl dev",
-        "test": "vitest",
-        "tslint": "tsc"
+        "lint": "bun tsc & bun eslint",
+        "start": "vite"
     },
     "dependencies": {
-        "@iconify/react": "*",
-        "@netlify/functions": "*",
-        "axios": "*",
-        "react": "*",
-        "react-dom": "*",
-        "react-helmet-async": "*",
-        "react-hot-toast": "*",
-        "react-router-dom": "*",
-        "swr": "*",
-        "uuid": "*",
-        "zustand": "*"
+        "astro": "latest",
+        "react-dom": "latest",
+        "react-router-dom": "latest",
+        "react": "latest",
+        "uuid": "latest",
+        "zustand": "latest"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "*",
-        "@testing-library/react": "*",
-        "@types/node": "*",
-        "@types/react": "*",
-        "@types/react-dom": "*",
-        "@types/react-router-dom": "*",
-        "@types/uuid": "*",
-        "@typescript-eslint/eslint-plugin": "*",
-        "@typescript-eslint/parser": "*",
-        "@vitejs/plugin-react-swc": "*",
-        "autoprefixer": "*",
-        "eslint": "*",
-        "jsdom": "*",
-        "sass": "*",
-        "typescript": "*",
-        "vite": "*",
-        "vite-plugin-pwa": "*",
-        "vitest": "*"
-    },
-    "private": true
+        "@aephonics/config": "latest",
+        "@testing-library/jest-dom": "latest",
+        "@testing-library/react": "latest",
+        "@types/bun": "latest",
+        "@types/react-dom": "latest",
+        "@types/react-router-dom": "latest",
+        "@types/react": "latest",
+        "@types/uuid": "latest",
+        "@vite-pwa/astro": "latest",
+        "@vitejs/plugin-react-swc": "latest",
+        "autoprefixer": "latest",
+        "eslint": "latest",
+        "jsdom": "latest",
+        "sass": "latest",
+        "typescript": "latest",
+        "vite-plugin-pwa": "latest",
+        "vite": "latest"
+    }
 }
