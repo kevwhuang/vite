@@ -5,7 +5,8 @@ const ignores = [
 ];
 
 const globals = [
-    '',
+    'ZustandActions',
+    'ZustandState',
 ];
 
 const overrides = [
