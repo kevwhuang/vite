@@ -8,7 +8,6 @@
         "start": "vite"
     },
     "dependencies": {
-        "astro": "latest",
         "react": "latest",
         "react-dom": "latest",
         "react-router-dom": "latest",
@@ -24,7 +23,6 @@
         "@types/react-dom": "latest",
         "@types/react-router-dom": "latest",
         "@types/uuid": "latest",
-        "@vite-pwa/astro": "latest",
         "@vitejs/plugin-react-swc": "latest",
         "autoprefixer": "latest",
         "eslint": "latest",
