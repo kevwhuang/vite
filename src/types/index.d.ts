@@ -1,0 +1,3 @@
+interface ZustandActions { }
+
+interface ZustandState { }

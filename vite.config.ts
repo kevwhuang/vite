@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 
 const manifest: Partial<ManifestOptions> = {
-    background_color: '#000000',
+    background_color: 'white',
     description: '',
     display: 'standalone',
     icons: [
@@ -19,7 +19,7 @@ const manifest: Partial<ManifestOptions> = {
             src: '/icons/pwa-512x512.png',
             type: 'image/png',
         }, {
-            purpose: 'any maskable',
+            purpose: 'maskable',
             sizes: '512x512',
             src: '/icons/pwa-512x512.png',
             type: 'image/png',
@@ -28,7 +28,7 @@ const manifest: Partial<ManifestOptions> = {
     name: '',
     orientation: 'any',
     short_name: '',
-    theme_color: '#000000',
+    theme_color: 'white',
 };
 
 const pwa: Partial<VitePWAOptions> = {
@@ -44,14 +44,8 @@ const pwa: Partial<VitePWAOptions> = {
 
 const vite = defineConfig({
     appType: 'spa',
-    build: {
-        outDir: 'dist',
-    },
-    css: {
-        postcss: {
-            plugins: [autoprefixer as any],
-        },
-    },
+    build: { outDir: 'dist' },
+    css: { postcss: { plugins: [autoprefixer as any] } },
     envPrefix: 'VITE_',
     plugins: [
         react(),
@@ -59,9 +53,7 @@ const vite = defineConfig({
     ],
     publicDir: 'public',
     root: process.cwd(),
-    server: {
-        port: 3000,
-    },
+    server: { port: 3000 },
 });
 
 export default vite;

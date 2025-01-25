@@ -18,17 +18,13 @@
         "@aephonics/config": "latest",
         "@testing-library/jest-dom": "latest",
         "@testing-library/react": "latest",
-        "@types/bun": "latest",
-        "@types/react": "latest",
         "@types/react-dom": "latest",
         "@types/react-router-dom": "latest",
         "@types/uuid": "latest",
         "@vitejs/plugin-react-swc": "latest",
         "autoprefixer": "latest",
-        "eslint": "latest",
         "jsdom": "latest",
         "sass": "latest",
-        "typescript": "latest",
         "vite": "latest",
         "vite-plugin-pwa": "latest"
     }

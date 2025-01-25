@@ -1,5 +1,1 @@
 # Vite
-
-Authors: 
-
-Version: 
