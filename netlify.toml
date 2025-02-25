@@ -1,8 +1,6 @@
 [build]
 command = 'bun run build'
 publish = 'dist'
-[build.processing.html]
-pretty_urls = true
 
 [[headers]]
 for = '/*'

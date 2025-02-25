@@ -11,21 +11,19 @@
         "react": "latest",
         "react-dom": "latest",
         "react-router-dom": "latest",
+        "sass": "latest",
         "uuid": "latest",
+        "vite": "latest",
+        "vite-plugin-pwa": "latest",
         "zustand": "latest"
     },
     "devDependencies": {
         "@aephonics/config": "latest",
-        "@testing-library/jest-dom": "latest",
-        "@testing-library/react": "latest",
         "@types/react-dom": "latest",
         "@types/react-router-dom": "latest",
         "@types/uuid": "latest",
         "@vitejs/plugin-react-swc": "latest",
         "autoprefixer": "latest",
-        "jsdom": "latest",
-        "sass": "latest",
-        "vite": "latest",
-        "vite-plugin-pwa": "latest"
+        "jsdom": "latest"
     }
 }

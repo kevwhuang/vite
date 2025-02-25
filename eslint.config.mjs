@@ -1,20 +1,19 @@
 import { eslint } from '@aephonics/config';
 
+const ignores = [
+    'dist/**',
+];
+
+const globals = [
+    'ZustandActions',
+    'ZustandState',
+];
+
 const overrides = [
     {
         files: ['**/*.{ts,tsx}'],
-        languageOptions: {
-            globals: {
-                ZustandActions: true,
-                ZustandState: true,
-            },
-        },
-        rules: {},
+        languageOptions: { globals: Object.fromEntries(globals.map(e => [e, true])) },
     },
-];
-
-const ignores = [
-    'dist/**',
 ];
 
 eslint.push(...overrides);

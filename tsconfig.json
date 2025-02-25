@@ -70,7 +70,7 @@
         "useUnknownInCatchVariables": true,
         "verbatimModuleSyntax": true,
         "maxNodeModuleJsDepth": 0,
-        "baseUrl": "./",
+        "baseUrl": ".",
         "declarationDir": "dist",
         "generateCpuProfile": "cpuprofile",
         "jsx": "react-jsx",
@@ -89,14 +89,14 @@
             "scripthost",
             "webworker",
         ],
+        "types": [
+            "bun-types",
+            "vite/client",
+        ],
         "paths": {
             "react": [
                 "node_modules/@types/react",
             ],
         },
-        "types": [
-            "bun-types",
-            "vite/client",
-        ],
     },
 }
